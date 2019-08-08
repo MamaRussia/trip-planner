@@ -1,10 +1,15 @@
 const express = require("express"),
     mongo = require("mongodb").MongoClient,
+
     app = express(),
     url = "mongodb://localhost:27017";
+
+    app = express();
+
     // API = require("./API");
 
 // app.use("./API.js", API)
+
 
 
 app.use(express.json());
