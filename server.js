@@ -3,13 +3,15 @@ const express = require("express"),
 
     app = express(),
     url = "mongodb://localhost:27017";
-
-    app = express();
+=====
 
     // API = require("./API");
 
 // app.use("./API.js", API)
 
+
+
+=======
 
 
 app.use(express.json());
@@ -42,7 +44,10 @@ res.status(200).json({ trips:items })
 app.post('/api/expense', (req, res) => { 
     expenses.insertOne({
         trip: req.body.trip,
-        date: req.body.amount,
+<
+        date: req.body.date,
+        amount: req.body.amount,
+
         category: req.body.category,
         description: req.body.description
     }, (err, result) => {
@@ -58,7 +63,9 @@ app.post('/api/expense', (req, res) => {
  })
 app.get('/api/expenses', (req, res) => { /* */ });
 
-let db, trips, expenses;
+
+// let db, trips, expenses;
+
 
 mongo.connect(url,
     (err, client) => {
